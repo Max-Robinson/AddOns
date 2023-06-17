@@ -1,0 +1,86 @@
+****************************************************************************************************
+*	Altaholic for Vanilla WoW: Change Log							   *
+****************************************************************************************************
+	v1.0.9
+	- RightClick menus fixed - root cause: renamed frames from previous release
+
+	- Re-origanized addon files
+****************************************************************************************************
+	v1.0.8
+	- Renamed all frames to something less generic to avoid global collisions. The recent fix
+	  for the addon "Mail" wasn't enough.
+	
+	- Fixed an event issue where a function was clearing characters bank cache upon close.
+****************************************************************************************************
+	v1.0.7
+	- Fixed an invalid method error while using Altaholic with the addon "Mail". The framename
+	  the original author used ("Mail") was too generic and caused a conflict. Changed the
+	  framename to ("AltoMail") to avoid this conflict.
+****************************************************************************************************
+	v1.0.6
+	- Fixed an issue with the Bag Usage menu not updating the bags size correctly after
+	  upgrading/changing a bag slot.
+
+	- Fixed an issue with E-Mails getting marked as read when a player opens their mailbox.
+	  This causes all items in the mailbox to go from (30 to X-num of days left) to 3 days
+	  remaining. The Altoholic option [Scan mail body (marks it as read)] was broken.
+	  Changed the default to "off (unchecked" and fixed the toggle.
+
+	- During one of my code clean-ups I inadvertanly removed my "UIDropDownMenu_CreateInfo"
+	  code shim. Originally this API didn't exsist in Vanilla WoW but does in BC. Cartographer
+	  has a simular shim so this issue was missed in testing before the latest release. This
+	  has been fixed and if you have Cartographer or not, this should no longer spam the player
+	  with errors.
+****************************************************************************************************
+	v1.0.5
+	- Added ChatLink support. Questlinks will inform you which Alts have the quest. Itemlinks
+	  will inform you where the item is dropped if it’s gear. If it’s a consumable or any other
+	  type of item you can use it will tell you how many you have and which Alts have them. In
+	  some cases, it will tell you if an item is a crafted item. “Item Source” can be toggled
+	  on/off in the Options panel.
+
+	- Speaking of “…how many you have…”. Item counts! Yes, hover over a piece of Wool, a
+	  Bandage, or a healing potion etc. The tooltip will inform you which Alts have it, how
+	  much, and tell you if it’s in the Alt’s bank or bags. “Item Source, Item Count Per
+	  Character, and Total Item Count” can be toggled on/off in the Options panel.
+
+	- Options… both “Already Known” and “Learnable By…” were at one point combined into one
+	  on/off switch. Now, they are separated and can be toggled separately. By default,
+	  “Include Already Known” is off and “Include Learnable By” is on. Makes for a cleaner
+	  tooltip as there is already a flood of info going to it.
+
+	- All tooltips are now processed not just inside Altaholic but now outside and information
+	  is available from Player Bank and Bags, the Mailbox, Auction House, and Chat frames.
+***************************************************************************************************
+	v1.0.4
+	- The OnClick function in the XML - the values were reversed (BC method)
+
+	- Cleaned up other OnClick, OnShow, OnEnter functions
+****************************************************************************************************
+	v1.0.3
+	- Fixed the Consumable's and Trade Goods search sections. There are no sub-categories for
+	  these types of items. Basically, works the same way the Auction House search works. This
+	  wasn't available until BC.
+
+	- Fixed a memory leak. I found a few more functions with bugs in them that was inserting [0]
+	  keys into tables and then polluting the Saved Variables file which can cause other
+	  functions to not find what they are looking for. These were also not getting cleared
+	  properly which caused all the cache tables to grow over time. I’ve also inserted some
+	  code that will scrub for [0] keys incase I missed some sub-routines.
+
+	- Tooltips will now notify the player when and which characters trade skill database is
+	  empty. It’s also now smart enough to know if a character has a particular trade skill.
+****************************************************************************************************
+	v1.0.2
+	- Narrowed the the tooltip checker to only include the mailbox, auction house and bag
+	  tooltips so we aren't hooking tooltips we don't need to read.
+
+	- Recipe checker now checks Class Books and Recipes.
+****************************************************************************************************
+	v1.0.1
+	- Added some screenshots
+
+	- Fixed double tooltip issues when other addons are present
+
+	- Expanded some tooltip features to include some additional frames
+****************************************************************************************************

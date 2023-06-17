@@ -1,0 +1,58 @@
+﻿## Interface: 11200
+## Title: Altoholic for Vanilla WoW
+## Title-zhCN: |cffeedd99 [物品] |r: 全角色统计 Altoholic
+## Notes: Provides information about your alts
+## Notes-zhTW: 讓你即時撿閱你所有角色的資料
+## Notes-zhCN: 能让你全面掌握你的所有角色的信息。
+## Author: Dyaxler
+## Version: 1.0.9
+## OptionalDeps: Ace2, LibBabble-Zone-3.0, LibBabble-Boss-3.0, LibBabble-Inventory-3.0, LibBabble-Faction-3.0, LibBabble-Class-3.0, DewdropLib, FuBarPlugin-2.0
+## SavedVariables: AltoholicDB, AltoholicFuDB
+## X-Category: Interface Enhancements
+
+Libs\LibStub\LibStub.lua
+Libs\AceLibrary\AceLibrary.lua
+Libs\AceOO-2.0\AceOO-2.0.lua
+Libs\AceAddon-2.0\AceAddon-2.0.lua
+Libs\AceConsole-2.0\AceConsole-2.0.lua
+Libs\AceHook-2.1\AceHook-2.1.lua
+Libs\AceDB-2.0\AceDB-2.0.lua
+Libs\AceEvent-2.0\AceEvent-2.0.lua
+Libs\AceLocale-2.2\AceLocale-2.2.lua
+Libs\AceHook-2.1\AceHook-2.1.lua
+Libs\LibBabble-Boss-3.0\LibBabble-Boss-3.0.lua
+Libs\LibBabble-Zone-3.0\LibBabble-Zone-3.0.lua
+Libs\LibBabble-Class-3.0\LibBabble-Class-3.0.lua
+Libs\LibBabble-Faction-3.0\LibBabble-Faction-3.0.lua
+Libs\LibBabble-Inventory-3.0\LibBabble-Inventory-3.0.lua
+Libs\Dewdrop-2.0\Dewdrop-2.0.lua
+Libs\Gratuity-2.0\Gratuity-2.0.lua
+Libs\Tablet-2.0\Tablet-2.0.lua
+
+Locale\localization_enUS.lua
+Locale\localization_frFR.lua
+Locale\localization_deDE.lua
+Locale\localization_zhTW.lua
+Locale\localization_zhCN.lua
+
+AltoholicTemplates.xml
+Core.lua
+Items\Loots.lua
+Items\Suggestions.lua
+Items\Suggestions_zhCN.lua
+Items\Suggestions_zhTW.lua
+Altoholic.lua
+Altoholic.xml
+
+Modules\AccountSummary.xml
+Modules\AuctionHouse.xml
+Modules\BagUsage.xml
+Modules\Containers.xml
+Modules\Equipment.xml
+Modules\Mails.xml
+Modules\Options.xml
+Modules\Reputations.xml
+Modules\Recipes.xml
+Modules\Quests.xml
+Modules\Search.xml
+Modules\Skills.xml
